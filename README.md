@@ -29,7 +29,7 @@ python ./extract_feature/visual_genome/visual_genome_extract_action_object_w2v.p
 ```
 
 ---
-## Pre-trained Setting
+## Experiments
 1) To train cross attention on HICO/VG datasets under different training splits (1A/1A2B), please run the following commands:
 ```
 # HICO experiments
