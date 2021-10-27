@@ -139,28 +139,9 @@ class CrossAttention(nn.Module):
         else:       
             V_o_n = V_o       
         return V_o_n     
-         
-    def contrastive_loss(self,in_package):     
-        s = in_package['s']     
-        labels = in_package['labels']     
-        labels = labels.float()     
              
-        s_mask = s.masked_fill(labels <= -2, -1e9)     
-             
-        log_Prob = self.log_softmax_func(s_mask)       
-             
-        indicator = labels.clone()     
-        indicator[indicator<1] = 0     
-             
-        loss = -torch.einsum('bk,bk->b',log_Prob,indicator)       
-        loss = torch.mean(loss)      
-             
-        return loss     
-             
-    def binary_cross_entropy(self,s,labels):      
-#        s = in_package['s']      
-#              
-#        labels = in_package['labels']      
+    def binary_cross_entropy(self,s,labels):
+
         labels = labels.float()      
               
         indicator = labels.clone()      
@@ -169,8 +150,7 @@ class CrossAttention(nn.Module):
         loss = self.bce_criterion(s,indicator)      
               
         mask = loss.new_ones(loss.shape).to(loss.device)      
-              
-#        mask = mask.masked_fill(labels == -2, 0)      
+           
         mask = mask.masked_fill(labels == 0, 0)      
               
         loss = torch.einsum('bk,bk->b',mask,loss)      
@@ -178,67 +158,14 @@ class CrossAttention(nn.Module):
               
         loss = torch.mean(loss/label_count)      
               
-        return loss   
-      
-    def binary_cross_entropy_hard_neg(self,in_package):     
-        s = in_package['s']     #bk  
-          
-             
-        labels = in_package['labels']     
-        labels = labels.float()     
-             
-        indicator = labels.clone()     
-        indicator[indicator<1] = 0     
-             
-        loss = self.bce_criterion(s,indicator)     
-          
-          
-        mask = loss.new_zeros(loss.shape).to(loss.device)     
-        mask = mask.masked_fill(labels == 1, 1)     
-        #### hard negative mining ####  
-        K = 100  
-        idxs_hard = torch.argsort(s, dim=-1, descending=True)[:,:K]  
-        for i in range(idxs_hard.shape[0]):  
-            mask[i][idxs_hard[i]] = 1  
-        #### hard negative mining ####  
-          
-#        if not (torch.sum(mask,dim=-1)>=K).all().item():  
-#            pdb.set_trace()  
-          
-        assert (torch.sum(mask,dim=-1)>=K).all().item()  
-          
-          
-        loss = torch.einsum('bk,bk->b',mask,loss)     
-        label_count = torch.einsum('bk->b',mask)     
-             
-        loss = torch.mean(loss/label_count)     
-             
-        return loss     
-       
-    def compute_cross_att_supervision(self,in_package):   
-        A_o = in_package['A_o']   
-        A_a = in_package['A_a']   
-           
-        Masks_a = in_package['Masks_a']   
-        Masks_o = in_package['Masks_o']   
-           
-        diff_att_o = torch.norm(A_o-Masks_o)/A_o.shape[0]   
-        diff_att_a = torch.norm(A_a-Masks_a)/A_a.shape[0]   
-           
-        return diff_att_o,diff_att_a   
-           
+        return loss  
+    
     def compute_loss(self,in_package):     
-        ## total loss       
-#        loss = self.contrastive_loss(in_package)     
+        ## total loss  
           
         labels = in_package['labels']     
         labels = labels.float()    
-          
-#        loss_self = self.binary_cross_entropy(s=in_package['s_self'],labels=in_package['labels'])     
-#        diff_att_o,diff_att_a = self.compute_cross_att_supervision(in_package)   
-#        s_cross = in_package['s_cross']  
-#        loss_cross = self.binary_cross_entropy(s=in_package['s'],labels=in_package['labels'])#self.binary_cross_entropy(s=in_package['s_cross'],labels=in_package['labels'])  #torch.mean(torch.clamp(-labels*s_cross,min=0))  
-          
+        
         loss = self.binary_cross_entropy(s=in_package['s'],labels=in_package['labels'])#loss_self + 0.0*loss_cross  
           
         out_package = {'loss':loss,'weight_cross_a':self.weight_cross_a,'weight_cross_o':self.weight_cross_o}       
@@ -266,8 +193,6 @@ class CrossAttention(nn.Module):
         b = As.shape[0]   
         inp = torch.cat([Hs,positions,V_a[None].repeat(b,1,1)],dim=-1)         #[bkf,bkj,kv]   
         gaussian_params = net(inp)           #[bk4]   
-           
-#        gaussian_params = torch.sigmoid(gaussian_params)*self.grid_size    #[bk4]   
            
         delta_means = torch.tanh(gaussian_params[:,:,:2]) *self.grid_size     #[bk2]               #[bk2]   
         std_variances = torch.sigmoid(gaussian_params[:,:,2:]) *self.grid_size #[bk2]             #[bk2]   
