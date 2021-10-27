@@ -1,5 +1,3 @@
-# ICCV21 code release
-
 # Interaction Compass: Multi-Label Zero-Shot Learning of Human-Object Interactions via Spatial Relations
 
 ## Overview
