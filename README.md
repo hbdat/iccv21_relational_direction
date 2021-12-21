@@ -42,6 +42,16 @@ python ./experiments/visual_genome_pad/VG_pad_CrossAttention.py --partition trai
 ```
 
 ---
+## Pretrained Models
+For ease of reproducing the results, we provided the pretrained models for:
+Dataset | Setting | Model
+--- |:---:|:---
+HICO | 1A2B | [download](https://drive.google.com/file/d/1g8I_-WJVFpwZPeaf9qkjT_9i7p8s3xI8/view?usp=sharing)
+HICO | 1A | [download](https://drive.google.com/file/d/1Jttz9iFNKT76ZOHnP6gswjOPDGwxSbqj/view?usp=sharing)
+VisualGenome | 1A2B | [download](https://drive.google.com/file/d/1YO8HVcnXTDU7asY_cxX7OiMjp3v-UPRp/view?usp=sharing)
+VisualGenome | 1A | [download](https://drive.google.com/file/d/1vEOFAsGNkcOAg7gKVTnAOxyXozpYRXWe/view?usp=sharing)
+
+---
 ## Citation
 If you find the project helpful, we would appreciate if you cite the works:
 ```
