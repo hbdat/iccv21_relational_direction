@@ -51,6 +51,13 @@ HICO | 1A | [download](https://drive.google.com/file/d/1Jttz9iFNKT76ZOHnP6gswjOP
 VisualGenome | 1A2B | [download](https://drive.google.com/file/d/1YO8HVcnXTDU7asY_cxX7OiMjp3v-UPRp/view?usp=sharing)
 VisualGenome | 1A | [download](https://drive.google.com/file/d/1vEOFAsGNkcOAg7gKVTnAOxyXozpYRXWe/view?usp=sharing)
 
+To evaluate pretrained model, please run:
+
+```
+python ./experiments/hico_det/hico_det_pad_CrossAttention.py --partition train_1A2B --idx_GPU 0 --save_folder ./results/HICO_1A2B --mll_k_3 7 --mll_k_5 10 --loc_k  --load_model ./pretrained_model/model_final_HICO_1A2B.pt
+```
+where `./pretrained_model/model_final_HICO_1A2B.pt` is the path of the corresponding pretrained model.
+
 ---
 ## Citation
 If you find the project helpful, we would appreciate if you cite the works:

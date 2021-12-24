@@ -51,6 +51,7 @@ def str2bool(v):
 parser = argparse.ArgumentParser()
 parser.add_argument('--idx_GPU', type=int, default=0, help='')
 parser.add_argument('--save_folder', type=str, default='', help='')
+parser.add_argument('--load_model', type=str, default='', help='')
 parser.add_argument('--comment', type=str, default='', help='')
 parser.add_argument('--trainable_w2v', type=str2bool, nargs='?', const=True, default=True)
 parser.add_argument('--normalize_V', type=str2bool, nargs='?', const=True, default=True)
@@ -106,6 +107,10 @@ model = CrossAttention(dim_f=2048,dim_v=300,
 
 device = torch.device("cuda:{}".format(idx_GPU) if torch.cuda.is_available() else "cpu")
 model.to(device)
+
+if opt.load_model != '':
+    model.load_state_dict(torch.load(opt.load_model,map_location=device))
+
 #%%
 params_to_update = []
 params_names = []
