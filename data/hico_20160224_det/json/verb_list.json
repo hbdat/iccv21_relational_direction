@@ -1,0 +1,470 @@
+[
+    {
+        "id": "001",
+        "name": "adjust"
+    },
+    {
+        "id": "002",
+        "name": "assemble"
+    },
+    {
+        "id": "003",
+        "name": "block"
+    },
+    {
+        "id": "004",
+        "name": "blow"
+    },
+    {
+        "id": "005",
+        "name": "board"
+    },
+    {
+        "id": "006",
+        "name": "break"
+    },
+    {
+        "id": "007",
+        "name": "brush_with"
+    },
+    {
+        "id": "008",
+        "name": "buy"
+    },
+    {
+        "id": "009",
+        "name": "carry"
+    },
+    {
+        "id": "010",
+        "name": "catch"
+    },
+    {
+        "id": "011",
+        "name": "chase"
+    },
+    {
+        "id": "012",
+        "name": "check"
+    },
+    {
+        "id": "013",
+        "name": "clean"
+    },
+    {
+        "id": "014",
+        "name": "control"
+    },
+    {
+        "id": "015",
+        "name": "cook"
+    },
+    {
+        "id": "016",
+        "name": "cut"
+    },
+    {
+        "id": "017",
+        "name": "cut_with"
+    },
+    {
+        "id": "018",
+        "name": "direct"
+    },
+    {
+        "id": "019",
+        "name": "drag"
+    },
+    {
+        "id": "020",
+        "name": "dribble"
+    },
+    {
+        "id": "021",
+        "name": "drink_with"
+    },
+    {
+        "id": "022",
+        "name": "drive"
+    },
+    {
+        "id": "023",
+        "name": "dry"
+    },
+    {
+        "id": "024",
+        "name": "eat"
+    },
+    {
+        "id": "025",
+        "name": "eat_at"
+    },
+    {
+        "id": "026",
+        "name": "exit"
+    },
+    {
+        "id": "027",
+        "name": "feed"
+    },
+    {
+        "id": "028",
+        "name": "fill"
+    },
+    {
+        "id": "029",
+        "name": "flip"
+    },
+    {
+        "id": "030",
+        "name": "flush"
+    },
+    {
+        "id": "031",
+        "name": "fly"
+    },
+    {
+        "id": "032",
+        "name": "greet"
+    },
+    {
+        "id": "033",
+        "name": "grind"
+    },
+    {
+        "id": "034",
+        "name": "groom"
+    },
+    {
+        "id": "035",
+        "name": "herd"
+    },
+    {
+        "id": "036",
+        "name": "hit"
+    },
+    {
+        "id": "037",
+        "name": "hold"
+    },
+    {
+        "id": "038",
+        "name": "hop_on"
+    },
+    {
+        "id": "039",
+        "name": "hose"
+    },
+    {
+        "id": "040",
+        "name": "hug"
+    },
+    {
+        "id": "041",
+        "name": "hunt"
+    },
+    {
+        "id": "042",
+        "name": "inspect"
+    },
+    {
+        "id": "043",
+        "name": "install"
+    },
+    {
+        "id": "044",
+        "name": "jump"
+    },
+    {
+        "id": "045",
+        "name": "kick"
+    },
+    {
+        "id": "046",
+        "name": "kiss"
+    },
+    {
+        "id": "047",
+        "name": "lasso"
+    },
+    {
+        "id": "048",
+        "name": "launch"
+    },
+    {
+        "id": "049",
+        "name": "lick"
+    },
+    {
+        "id": "050",
+        "name": "lie_on"
+    },
+    {
+        "id": "051",
+        "name": "lift"
+    },
+    {
+        "id": "052",
+        "name": "light"
+    },
+    {
+        "id": "053",
+        "name": "load"
+    },
+    {
+        "id": "054",
+        "name": "lose"
+    },
+    {
+        "id": "055",
+        "name": "make"
+    },
+    {
+        "id": "056",
+        "name": "milk"
+    },
+    {
+        "id": "057",
+        "name": "move"
+    },
+    {
+        "id": "058",
+        "name": "no_interaction"
+    },
+    {
+        "id": "059",
+        "name": "open"
+    },
+    {
+        "id": "060",
+        "name": "operate"
+    },
+    {
+        "id": "061",
+        "name": "pack"
+    },
+    {
+        "id": "062",
+        "name": "paint"
+    },
+    {
+        "id": "063",
+        "name": "park"
+    },
+    {
+        "id": "064",
+        "name": "pay"
+    },
+    {
+        "id": "065",
+        "name": "peel"
+    },
+    {
+        "id": "066",
+        "name": "pet"
+    },
+    {
+        "id": "067",
+        "name": "pick"
+    },
+    {
+        "id": "068",
+        "name": "pick_up"
+    },
+    {
+        "id": "069",
+        "name": "point"
+    },
+    {
+        "id": "070",
+        "name": "pour"
+    },
+    {
+        "id": "071",
+        "name": "pull"
+    },
+    {
+        "id": "072",
+        "name": "push"
+    },
+    {
+        "id": "073",
+        "name": "race"
+    },
+    {
+        "id": "074",
+        "name": "read"
+    },
+    {
+        "id": "075",
+        "name": "release"
+    },
+    {
+        "id": "076",
+        "name": "repair"
+    },
+    {
+        "id": "077",
+        "name": "ride"
+    },
+    {
+        "id": "078",
+        "name": "row"
+    },
+    {
+        "id": "079",
+        "name": "run"
+    },
+    {
+        "id": "080",
+        "name": "sail"
+    },
+    {
+        "id": "081",
+        "name": "scratch"
+    },
+    {
+        "id": "082",
+        "name": "serve"
+    },
+    {
+        "id": "083",
+        "name": "set"
+    },
+    {
+        "id": "084",
+        "name": "shear"
+    },
+    {
+        "id": "085",
+        "name": "sign"
+    },
+    {
+        "id": "086",
+        "name": "sip"
+    },
+    {
+        "id": "087",
+        "name": "sit_at"
+    },
+    {
+        "id": "088",
+        "name": "sit_on"
+    },
+    {
+        "id": "089",
+        "name": "slide"
+    },
+    {
+        "id": "090",
+        "name": "smell"
+    },
+    {
+        "id": "091",
+        "name": "spin"
+    },
+    {
+        "id": "092",
+        "name": "squeeze"
+    },
+    {
+        "id": "093",
+        "name": "stab"
+    },
+    {
+        "id": "094",
+        "name": "stand_on"
+    },
+    {
+        "id": "095",
+        "name": "stand_under"
+    },
+    {
+        "id": "096",
+        "name": "stick"
+    },
+    {
+        "id": "097",
+        "name": "stir"
+    },
+    {
+        "id": "098",
+        "name": "stop_at"
+    },
+    {
+        "id": "099",
+        "name": "straddle"
+    },
+    {
+        "id": "100",
+        "name": "swing"
+    },
+    {
+        "id": "101",
+        "name": "tag"
+    },
+    {
+        "id": "102",
+        "name": "talk_on"
+    },
+    {
+        "id": "103",
+        "name": "teach"
+    },
+    {
+        "id": "104",
+        "name": "text_on"
+    },
+    {
+        "id": "105",
+        "name": "throw"
+    },
+    {
+        "id": "106",
+        "name": "tie"
+    },
+    {
+        "id": "107",
+        "name": "toast"
+    },
+    {
+        "id": "108",
+        "name": "train"
+    },
+    {
+        "id": "109",
+        "name": "turn"
+    },
+    {
+        "id": "110",
+        "name": "type_on"
+    },
+    {
+        "id": "111",
+        "name": "walk"
+    },
+    {
+        "id": "112",
+        "name": "wash"
+    },
+    {
+        "id": "113",
+        "name": "watch"
+    },
+    {
+        "id": "114",
+        "name": "wave"
+    },
+    {
+        "id": "115",
+        "name": "wear"
+    },
+    {
+        "id": "116",
+        "name": "wield"
+    },
+    {
+        "id": "117",
+        "name": "zip"
+    }
+]
